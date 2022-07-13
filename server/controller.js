@@ -37,10 +37,10 @@ module.exports = {
     if(index === -1){
         res.status(400).send(`user not found`)
     } 
-    // else if(houses[index].price === 1000000 && type === 'plus') {
-    //     res.status(400).send(`price cannot go higher than 1000000`)
-    // }
-     else if(houses[index].price === 0 && type === 'minus'){
+    else if(houses[index].price === 1000000 && type === 'plus') {
+        res.status(400).send(`price cannot go higher than 1000000`)
+    }
+     else if(houses[index].price === 10000 && type === 'minus'){
         res.status(400).send(`cannot go below 1`)
     } else if( type === 'plus'){
         houses[index].price += 10000;
